@@ -1,3 +1,5 @@
+import 'package:code/config/routes/app_route.dart';
+import 'package:code/config/themes/add_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'features/random_code/presentation/screens/home_screen.dart';
@@ -10,7 +12,9 @@ class Code extends StatelessWidget {
     // ignore: prefer_const_constructors
     return MaterialApp(
 
-        home: HomeScreen(),
+      theme: appTheme(),
+      initialRoute: Routes.initialRoute,
+      routes: AppRoute.appRoute,
     
     );
   }
